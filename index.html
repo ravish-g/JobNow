@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore jobs and internships on JobNow.">
+    <title>JobNow | Find jobs and internships</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="home">
+        <div class="container header-row">
+            <a class="brand" href="#home">
+                <!-- Replace this span with <img class="brand-mark" src="logo.png" alt="">. -->
+                <span class="brand-mark" aria-hidden="true">JN</span>
+                <span>JobNow</span>
+            </a>
+            <nav class="navigation" aria-label="Main navigation">
+                <a href="#home" aria-current="page">Home</a>
+                <a href="#openings" id="jobs-link">Find jobs</a>
+                <button type="button" id="internships-link">Internships</button>
+                <a href="#employers">For employers</a>
+            </nav>
+            <button type="button" class="button button-outline" data-feature="Login / Sign up">
+                Login / Sign up
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero" aria-labelledby="welcome-heading">
+            <div class="container hero-layout">
+                <div>
+                    <p class="eyebrow"><span class="welcome-dot"></span> Welcome to JobNow</p>
+                    <h1 id="welcome-heading">Find a role worth<br class="desktop-break"> applying for.</h1>
+                    <p class="hero-copy">
+                        Explore internships and entry-level jobs by role, skill or city.
+                        A good place to start if you're figuring out what comes next.
+                    </p>
+                    <form class="search-form" id="job-search" role="search" aria-label="Search jobs">
+                        <label for="keyword">
+                            Role or keyword
+                            <input type="search" id="keyword" placeholder="e.g. Web developer">
+                        </label>
+                        <label for="location">
+                            Location
+                            <input type="search" id="location" placeholder="e.g. Remote">
+                        </label>
+                        <button class="button button-primary" type="submit">Search jobs</button>
+                    </form>
+                    <a class="text-link" href="#discover">Or browse by category <span aria-hidden="true">↓</span></a>
+                </div>
+
+                <aside class="notice-board" aria-label="Featured sample opening">
+                    <span class="board-pin" aria-hidden="true"></span>
+                    <article class="notice">
+                        <p class="eyebrow">From the job board</p>
+                        <span class="tag">Internship</span>
+                        <h2>Frontend Developer Intern</h2>
+                        <p>Northstar Studio · Remote</p>
+                        <button class="text-link" type="button" id="featured-link">
+                            Find this sample role <span aria-hidden="true">↗</span>
+                        </button>
+                    </article>
+                </aside>
+            </div>
+        </section>
+
+        <div class="container paths">
+            <section id="discover" class="path" aria-labelledby="discover-heading">
+                <p class="eyebrow">For job seekers</p>
+                <h2 id="discover-heading">Discover your job</h2>
+                <p>Pick a field to see the kinds of roles you can explore.</p>
+                <div class="categories" aria-label="Job categories">
+                    <!-- Add a category here and use the same name on its job cards below. -->
+                    <button type="button" data-filter="Engineering" aria-pressed="false">Engineering</button>
+                    <button type="button" data-filter="Sales" aria-pressed="false">Sales</button>
+                    <button type="button" data-filter="Marketing" aria-pressed="false">Marketing</button>
+                    <button type="button" data-filter="Design" aria-pressed="false">Design</button>
+                    <button type="button" data-filter="Finance" aria-pressed="false">Finance</button>
+                    <button type="button" data-filter="Human Resources" aria-pressed="false">Human Resources</button>
+                </div>
+            </section>
+
+            <section id="employers" class="path employer" aria-labelledby="employer-heading">
+                <p class="eyebrow">For employers</p>
+                <h2 id="employer-heading">Post a job</h2>
+                <p>Have an opening on your team? Share a job or internship with students and recent graduates.</p>
+                <button type="button" class="button button-outline" data-feature="Post a job">
+                    Post a job <span aria-hidden="true">↗</span>
+                </button>
+            </section>
+        </div>
+
+        <section class="container openings" id="openings" aria-labelledby="openings-heading">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Demo listings</p>
+                    <h2 id="openings-heading" tabindex="-1">Explore openings</h2>
+                </div>
+                <button class="text-link" type="button" id="clear-filters" hidden>Clear filters</button>
+            </div>
+            <p class="results-summary" id="results-summary" role="status">6 sample openings</p>
+            <!-- To add a listing, copy an article and update its category, type and location. -->
+            <div class="job-list">
+                <article class="job" data-category="Engineering" data-type="Internship" data-location="Remote">
+                    <span class="tag">Internship</span>
+                    <h3>Frontend Developer Intern</h3>
+                    <p>Northstar Studio · Remote</p>
+                    <p class="job-skill">HTML, CSS &amp; JavaScript</p>
+                </article>
+                <article class="job" data-category="Sales" data-type="Full-time" data-location="Ludhiana">
+                    <span class="tag">Full-time</span>
+                    <h3>Sales Associate</h3>
+                    <p>Fieldline Co. · Ludhiana</p>
+                    <p class="job-skill">Communication &amp; customer outreach</p>
+                </article>
+                <article class="job" data-category="Marketing" data-type="Internship" data-location="Chandigarh">
+                    <span class="tag">Internship</span>
+                    <h3>Digital Marketing Intern</h3>
+                    <p>Paper Kite Media · Chandigarh</p>
+                    <p class="job-skill">Social media &amp; content writing</p>
+                </article>
+                <article class="job" data-category="Design" data-type="Internship" data-location="Remote">
+                    <span class="tag">Internship</span>
+                    <h3>UI Design Intern</h3>
+                    <p>Gridleaf Design · Remote</p>
+                    <p class="job-skill">Figma &amp; prototyping</p>
+                </article>
+                <article class="job" data-category="Finance" data-type="Full-time" data-location="Jalandhar">
+                    <span class="tag">Full-time</span>
+                    <h3>Junior Accounts Assistant</h3>
+                    <p>Blue Ledger · Jalandhar</p>
+                    <p class="job-skill">Excel &amp; bookkeeping</p>
+                </article>
+                <article class="job" data-category="Human Resources" data-type="Internship" data-location="Phagwara">
+                    <span class="tag">Internship</span>
+                    <h3>Recruitment Intern</h3>
+                    <p>Bridgeway People · Phagwara</p>
+                    <p class="job-skill">Candidate screening &amp; scheduling</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-row">
+            <strong>JobNow</strong>
+            <p>CSE326 project · Lovely Professional University</p>
+            <a class="text-link" href="#home">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <dialog id="feature-dialog" aria-labelledby="feature-title">
+        <p class="eyebrow">Coming in a later version</p>
+        <h2 id="feature-title"></h2>
+        <p id="feature-description"></p>
+        <form method="dialog">
+            <button class="button button-primary">Back to JobNow</button>
+        </form>
+    </dialog>
+</body>
+</html>
